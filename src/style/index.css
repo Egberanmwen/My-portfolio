@@ -28,6 +28,9 @@
     --bs-light: #f8f9fa;
     --bs-dark: #212529;   
 } 
+body{
+    height: 100%;
+}
 nav{
     height: 60px;
     width: 100%;
@@ -109,20 +112,19 @@ nav{
     flex-wrap: wrap;
 }
 .introText{
-    flex-basis: 35;
-    
+    flex-basis: 40;
 }
 .imageDiv{
-    flex-basis:50%;
+    flex-basis:55%;
 }
 .personalImage{
-   width: 200px;
- 
-    position: relative;
-    bottom: 5rem;
+   width: 400px;
+    
+    position: relative; 
+    left: 10rem;
+    
     border-radius: 5px;
 }
-
 .morePar{
     margin-top: 2rem;
 }
@@ -142,6 +144,8 @@ nav{
 .myFooter{
     background-color: var(--bs-blue);
     padding: 20px;
+    position: relative;
+    top: 15rem;
 }
 #footerDiv{
     display: flex;
@@ -152,46 +156,52 @@ nav{
     color: #fff;
     
 }
-@media screen and (min-width: 280px){
-    /* .col-2{
-        margin-top: 5rem;  
-    } 
-    
-    .menu{
-        display: block;
-    }
-    .menu li{
-        display: inline
-    }
-    #hamburger{
-        display: block;
+@media screen and (max-width: 900px){
+    .row{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     .imageDiv{
-        width: 100%;  
+        margin-right: 5rem;
+    }
+    .linkDiv ul li a:hover::after{
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s all;
+        background-color: coral;
     } 
-    .personalImage{
-        margin-top: 3rem;
-    }    */
-}
+    .myFooter{
+        margin-top: 10rem;
+    }
+} 
 @media screen and (max-width: 800px){
-    .col-2{
-        margin-top: 5rem;  
-    } 
-    .imageDiv{
-        width: 100%;  
-    } 
-    .personalImage{
-        margin-top: 3rem;
-    }   
-}
-/* @media screen and (min-width: 800px){
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
     .col-2{
         margin-top: 5rem;
     } 
     .imageDiv{
-        flex-basis:50%;
+        width: 100%;
+        position: relative;
+        right: 16.6rem;
     }   
     .personalImage{
-        max-width: ;
+       
     }
-} */
+    .linkDiv ul li a:hover::after{
+        content: "";
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: 0.5s all;
+        background-color: coral;
+    } 
+} 
